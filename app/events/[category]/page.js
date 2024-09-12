@@ -8,14 +8,16 @@ export default async function EventPerCityPage({ params }) {
     const filteredEvents = allEvents.filter(ev => ev.city.toLowerCase() === category)
 
     return (
-        <>
+        <div className='cat_events'>
             <h2>Event in {category[0].toUpperCase() + category.slice(1,)}</h2>
-            {filteredEvents.map(ev => <Link key={ev.id} href={`/events/${category}/${ev.id}`}>
-                <Image src={ev.image} width={400} height={200}></Image>
-                <h4>{ev.title}</h4>
-                <p>{ev.description}</p>
-                
-            </Link>)}
-        </>
+            <div className='contents'>
+                {filteredEvents.map(ev => <Link key={ev.id} className='card' href={`/events/${category}/${ev.id}`}>
+                    <Image src={ev.image} width={300} height={150}></Image>
+                    <h4>{ev.title}</h4>
+                    <p>{ev.description}</p>
+
+                </Link>)}
+            </div>
+        </div>
     );
 }
