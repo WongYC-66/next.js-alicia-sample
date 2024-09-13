@@ -8,7 +8,7 @@ export default async function SingleEventPage({ params }) {
 
     const event = allEvents.filter(ev => ev.id === id).pop()
 
-    console.log(event)
+    // console.log(event)
 
     return (
         <>
@@ -21,4 +21,27 @@ export default async function SingleEventPage({ params }) {
             <RegisterForm event={event} />
         </>
     );
+}
+
+// for static build
+export async function generateStaticParams() {
+
+    let { allEvents } = await import('@/app/data/data.json')
+    allEvents = allEvents.map(ev => {
+        return {
+            category : ev.city.toLowerCase(),
+            id : ev.id
+        }
+    })
+    // console.log(allEvents)
+    /* return 
+    [
+        {category: london, id: london-comic-con-winter}, 
+        {category: london, id: hyde-park-winter-wonderland}, 
+        {category: london, id: new-years-eve-in-london-2023}, 
+        {category: san-francisco, id: innovation-summit-san-francisco},
+    ]
+
+    */
+    return allEvents
 }
