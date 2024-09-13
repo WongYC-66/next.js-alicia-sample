@@ -10,6 +10,9 @@ const nextConfig = {
             'hydeparkwinterwonderland.com',
             'wembleypark.com',
         ],
+        loader: 'akamai',
+        path: "",
+        assetPrefix: "./",
     }
 };
 
