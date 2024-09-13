@@ -3,7 +3,6 @@ const nextConfig = {
 
     // --- npm run build : to generate out folder of static files
     output: 'export', // export as static sites html, disable when use dynamic (web hosting)
-
     images: {
         domains: [
             'images.unsplash.com',
@@ -13,8 +12,8 @@ const nextConfig = {
         // loader: 'akamai',
         // path: "",
     },
-    
-    assetPrefix: "./"
+    assetPrefix: "./",
+    basePath: '/next.js-alicia-sample',
 };
 
 export default nextConfig;
