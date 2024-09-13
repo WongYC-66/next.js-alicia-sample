@@ -13,7 +13,7 @@ export default async function SingleEventPage({ params }) {
     return (
         <>
             <h2>{event.title}</h2>
-            <Image alt={event.title} src={event.image} width={800} height={400} alt={event.title}></Image>
+            <Image src={event.image} width={800} height={400} alt={event.title}></Image>
 
             <p>{event.description}</p>
 
