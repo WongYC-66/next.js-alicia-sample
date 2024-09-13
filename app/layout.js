@@ -9,7 +9,7 @@ export default function RootLayout({ children }) {
 
         <header>
           <div className='topNav'>
-            <Image akt='logo' src='/image/logo_black.png' width={50} height={50} />
+            <Image alt='logo' src='/image/logo_black.png' width={50} height={50} />
             <nav>
               <ul>
                 <ol><Link href='/'>Home</Link></ol>

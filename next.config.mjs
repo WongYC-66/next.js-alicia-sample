@@ -12,7 +12,7 @@ const nextConfig = {
         // loader: 'akamai',
         // path: "",
     },
-    assetPrefix: "./",
+    // assetPrefix: "./",
     basePath: '/next.js-alicia-sample',
 };
 
