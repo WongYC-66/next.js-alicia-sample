@@ -13,8 +13,8 @@ const nextConfig = {
         // path: "",
         unoptimized: true,
     },
-    assetPrefix: "/next.js-alicia-sample",
-    basePath: '/next.js-alicia-sample',
+    // assetPrefix: "/next.js-alicia-sample",
+    basePath: process.env.NODE_ENV === 'production' ? '/next.js-alicia-sample' : ''
 };
 
 export default nextConfig;
