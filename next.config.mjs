@@ -11,8 +11,9 @@ const nextConfig = {
         ],
         // loader: 'akamai',
         // path: "",
+        unoptimized: true,
     },
-    // assetPrefix: "./",
+    assetPrefix: "/next.js-alicia-sample",
     basePath: '/next.js-alicia-sample',
 };
 
